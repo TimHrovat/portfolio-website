@@ -1,0 +1,90 @@
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.greet {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.center h1 {
+  font-size: 3.5rem;
+  margin-top: 10px;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homepage a i {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.homepage a i:hover {
+  cursor: pointer;
+  filter: brightness(1.4);
+}
+
+.homepage {
+  min-height: 100vh;
+}
+
+.page {
+  /* min-height: 100vh; */
+  padding: 100px 15% 100px 15%;
+  max-width: 1500px;
+}
+
+.page h2 {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.page p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: justify;
+  margin-right: 80px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.two-column img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .two-column {
+    grid-template-columns: repeat(1, auto);
+  }
+  .page p {
+    margin-right: 0px;
+    text-align: center;
+  }
+  .page {
+    text-align: center;
+  }
+  .two-column img {
+    margin: auto;
+    margin-top: 30px;
+  }
+}
