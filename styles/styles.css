@@ -41,7 +41,7 @@
 
 .page {
   /* min-height: 100vh; */
-  padding: 100px 15% 100px 15%;
+  padding: 100px 15% 0 15%;
   max-width: 1500px;
 }
 
