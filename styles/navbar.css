@@ -4,10 +4,10 @@
 :root {
   --white: #b1bebf;
   --orange: #ffba08;
-  --bright-orange: #ffcf55;
   --yellow: #e9e016;
-  --bright-yellow: #e8e058;
   --petrol: #223843;
+  --accent: #2b4959;
+  --link: #439a86;
 }
 
 * {
@@ -23,14 +23,16 @@ body {
   background-color: var(--petrol);
 }
 
-nav {
-  min-height: 8vh;
+#nav {
+  height: 8vh;
   width: 100%;
   max-width: 1800px;
   display: flex;
   position: fixed;
   padding-left: 10%;
   padding-right: 10%;
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
 .left-links {
@@ -85,4 +87,62 @@ a {
 .nav-contact:hover {
   cursor: pointer;
   filter: brightness(1.15);
+}
+
+.nav-button {
+  margin: auto 10px auto 10px;
+  background-color: var(--orange);
+  color: var(--petrol);
+  padding: 7px 9px 7px 9px;
+  border-radius: 100%;
+  display: none;
+}
+
+#nav-btn {
+  display: none;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  filter: brightness(1.15);
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-button {
+    display: block;
+  }
+
+  #nav-btn {
+    display: block;
+  }
+  .nav-list {
+    display: grid;
+    position: absolute;
+    right: -200px;
+    text-align: center;
+    top: 9vh;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .active {
+    right: 10%;
+  }
+
+  .nav-list a {
+    width: 100%;
+    background-color: var(--orange);
+    padding: 8px;
+  }
+
+  .nav-list li {
+    color: var(--petrol);
+    padding: 10px;
+  }
+
+  .nav-:hover a {
+    filter: brightness(1.25);
+  }
 }

@@ -57,9 +57,18 @@
 
 .page p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: justify;
   margin-right: 80px;
+}
+
+.page a {
+  color: var(--link);
+  transition: all 0.3s ease;
+}
+
+.page a:hover {
+  filter: brightness(1.25);
 }
 
 .two-column {
@@ -72,19 +81,67 @@
   border-radius: 20px;
 }
 
+.page ul {
+  margin-left: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.page li {
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+.project {
+  width: 100%;
+  background-color: var(--accent);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: black 1px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project h3 {
+  margin-left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  font-size: 1.3rem;
+}
+
+.project:hover {
+  filter: brightness(1.25);
+}
+
 @media screen and (max-width: 850px) {
   .two-column {
     grid-template-columns: repeat(1, auto);
   }
   .page p {
     margin-right: 0px;
-    text-align: center;
   }
+
+  .page h2 {
+    margin-bottom: 30px;
+  }
+
   .page {
-    text-align: center;
+    padding: 100px 10% 100px 10%;
   }
   .two-column img {
     margin: auto;
+    max-width: 250px;
     margin-top: 30px;
+    width: 50%;
   }
 }
