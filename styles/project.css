@@ -35,10 +35,6 @@ i {
   transition: all 0.3s ease;
 }
 
-i:hover {
-  filter: brightness(1.25);
-}
-
 body section div {
   margin-bottom: 50px;
   position: relative;
@@ -65,7 +61,7 @@ li {
 
 img {
   height: 250px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .two-section {
@@ -76,6 +72,11 @@ img {
 
 a {
   color: var(--link);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  filter: brightness(1.25);
 }
 
 @media screen and (max-width: 1050px) {

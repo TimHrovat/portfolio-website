@@ -7,7 +7,7 @@
   --yellow: #e9e016;
   --petrol: #223843;
   --accent: #2b4959;
-  --link: #439a86;
+  --link: #54c08c;
 }
 
 * {
@@ -21,6 +21,7 @@
 
 body {
   background-color: var(--petrol);
+  padding-bottom: 100px;
 }
 
 #nav {
