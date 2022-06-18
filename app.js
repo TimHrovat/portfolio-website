@@ -26,6 +26,17 @@ let showMenu = () => {
   menuIsShown = !menuIsShown;
 };
 
+let closeMenu = () => {
+  if (window.innerWidth > 1100) return;
+  let element = document.getElementById("menu");
+  let burger = document.getElementById("nav-btn");
+  element.classList.remove("active");
+  burger.classList.add("fa-bars");
+  burger.classList.remove("fa-times");
+  burger.style.padding = "7px 9px 7px 9px";
+  menuIsShown = !menuIsShown;
+};
+
 function toggleTheme() {
   let icon = document.getElementById("theme-btn-icon");
 

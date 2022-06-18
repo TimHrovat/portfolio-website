@@ -64,6 +64,7 @@ body {
 .page {
   padding: 100px 15% 0 15%;
   max-width: 1500px;
+  scroll-margin-top: 10vh;
 }
 
 .page h2 {
