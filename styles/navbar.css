@@ -99,6 +99,10 @@ a {
   outline-width: 2px;
 }
 
+.nav-button:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 1100px) {
   .nav-button {
     display: block;
