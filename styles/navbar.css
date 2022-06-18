@@ -133,6 +133,11 @@ a {
     color: var(--background);
     padding: 10px;
   }
+
+  .nav-list a:hover li {
+    cursor: pointer;
+    color: var(--background);
+  }
 }
 
 .nav-scrolled {
