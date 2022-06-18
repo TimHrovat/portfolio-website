@@ -78,7 +78,9 @@ a {
 
 .nav-contact {
   margin: auto 0 auto 10px;
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  /* background: linear-gradient(90deg, var(--orange), var(--yellow));
+   */
+  background-color: var(--link);
   padding: 6px 8px 6px 8px;
   border-radius: 50px;
   color: var(--petrol);
@@ -92,7 +94,7 @@ a {
 
 .nav-button {
   margin: auto 10px auto 10px;
-  background-color: var(--orange);
+  background-color: var(--link);
   color: var(--petrol);
   padding: 7px 9px 7px 9px;
   border-radius: 100%;
@@ -134,7 +136,7 @@ a {
 
   .nav-list a {
     width: 100%;
-    background-color: var(--orange);
+    background-color: var(--link);
     padding: 8px;
   }
 

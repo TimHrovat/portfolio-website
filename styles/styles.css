@@ -9,6 +9,7 @@
 .greet {
   font-style: italic;
   font-size: 1.3rem;
+  display: inline-block;
 }
 
 .center h1 {
@@ -18,21 +19,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.homepage a i {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  padding: 20px;
-  border-radius: 100%;
-}
-
-.homepage a i:hover {
-  cursor: pointer;
-  filter: brightness(1.4);
+  display: inline-block;
 }
 
 .homepage {
@@ -144,4 +131,63 @@
     margin-top: 30px;
     width: 50%;
   }
+}
+
+.underscore {
+  width: 3px;
+  height: 20px;
+  background-color: var(--link);
+  animation: blink 0.6s linear infinite alternate;
+}
+
+#underscore1 {
+  height: 1.3rem;
+}
+
+#underscore2 {
+  height: 2.7rem;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.down-arrow {
+  /* background: radial-gradient(var(--orange) 20%, var(--yellow)); */
+  background-color: var(--link);
+  display: block;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  padding: 18px;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.down-arrow i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--petrol);
+}
+
+.down-arrow:hover {
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
 }
