@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-dark">
 
 <head>
     <meta charset="UTF-8">
@@ -41,6 +41,11 @@
         </div>
     </nav>
 
+
+    <button id="theme-btn" class="theme-btn" onclick={toggleTheme()}>
+        <i id="theme-btn-icon" class="fa-solid fa-moon"></i>
+    </button>
+
     <section id="title" class="homepage">
         <div class="center">
             <div>
@@ -62,9 +67,11 @@
             <div>
                 <p>Hi, I'm Tim, an 18-year-old student from Ljubljana, Slovenia.</p>
                 <p>Aged 14, I wrote my first lines of code, and since then, I have been intrigued by it. Besides
-                    programming, I'm passionate about learning how things operate behind the scenes and tinkering with
+                    programming, I'm passionate about learning how things operate behind the scenes and tinkering
+                    with
                     microcontrollers.</p>
-                <p>In the next few years, I plan to expand my knowledge in the software development field and continue
+                <p>In the next few years, I plan to expand my knowledge in the software development field and
+                    continue
                     my path to becoming a software engineer.</p>
             </div>
             <img src="images/portrait.png" alt="Tim Hrovat's portrait">
@@ -78,7 +85,7 @@
         <ul>
             <li>C++</li>
             <li>Web Languages (HTML, CSS, JS)</li>
-            <li>ReactJS</li>
+            <li>ReactJS (Firebase integration)</li>
             <li>Relational databases (SQL)</li>
             <li>Embedded Systems (Arduino)</li>
         </ul>
@@ -88,7 +95,8 @@
         <h2>Work experience</h2>
         <p>01/01/2022 - current: Assistant & Community support at <a href="https://simpliservers.com/">Simpliservers</a>
         </p>
-        <p>01/02/2018 - current: Cost analyst & Documentation editor at <a href="https://www.emonaplus.si/">Emona Plus
+        <p>01/02/2018 - current: Cost analyst & Documentation editor at <a href="https://www.emonaplus.si/">Emona
+                Plus
                 d.o.o.</a></p>
         <p>01/04/2017 - current: Online store administrator & Digital print operator at <a
                 href="https://www.printboutiq.com/">Printboutiq</a></p>
@@ -121,7 +129,8 @@
     <section id="hobbies" class="page">
         <h2>Hobbies</h2>
         <p>Mountain biking - I push myself to the limits on local downhill trails and bikeparks</p>
-        <p>Coding challenges - I like solving those that require thinking and learning about new things to provide the
+        <p>Coding challenges - I like solving those that require thinking and learning about new things to provide
+            the
             optimal solution</p>
     </section>
     <section id="links" class="page">

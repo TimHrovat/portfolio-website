@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,20 @@
     <title>Tim Hrovat</title>
     <link rel="stylesheet" href="../styles/project.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <script src="https://kit.fontawesome.com/b20c84189b.js" crossorigin="anonymous"></script>
     <link rel="icon" href="../images/tab-icon.png" />
 </head>
 
 <body>
+    <button id="theme-btn" class="theme-btn" onclick={toggleTheme()}>
+        <i id="theme-btn-icon" class="fa-solid fa-moon"></i>
+    </button>
     <section>
         <div>
-            <a href="../index.html#projects"><i class="fa-solid fa-angle-left"></i></a>
+            <a class="left-arrow" href="../index.html#projects">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
             <h1>Phosphorland Website</h1>
         </div>
         <div class="two-section">
@@ -37,6 +43,8 @@
         </div>
 
     </section>
+    <script type="text/javascript" src="../app.js"></script>
+
 </body>
 
 </html>

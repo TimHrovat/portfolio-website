@@ -1,29 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-:root {
-  --white: #b1bebf;
-  --orange: #ffba08;
-  --yellow: #e9e016;
-  --petrol: #223843;
-  --accent: #2b4959;
-  --link: #54c08c;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  color: var(--white);
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--petrol);
-  padding-bottom: 100px;
-}
-
 #nav {
   height: 8vh;
   width: 100%;
@@ -56,6 +30,7 @@ a {
 .nav-title:hover {
   filter: brightness(1.25);
   cursor: pointer;
+  color: var(--link);
 }
 
 .nav-list {
@@ -65,7 +40,6 @@ a {
 
 .nav-list a {
   margin: auto 0 auto 0;
-  transition: all 0.2s ease;
   padding: 10px;
   font-size: 0.9rem;
   text-decoration: none;
@@ -73,32 +47,43 @@ a {
 
 .nav-list a:hover {
   filter: brightness(1.25);
+}
+
+.nav-list a li {
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover li {
   cursor: pointer;
+  color: var(--link);
 }
 
 .nav-contact {
   margin: auto 0 auto 10px;
-  /* background: linear-gradient(90deg, var(--orange), var(--yellow));
-   */
   background-color: var(--link);
   padding: 6px 8px 6px 8px;
   border-radius: 50px;
-  color: var(--petrol);
+  color: var(--background);
   transition: all 0.2s ease;
 }
 
 .nav-contact:hover {
   cursor: pointer;
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
   filter: brightness(1.15);
 }
 
 .nav-button {
   margin: auto 10px auto 10px;
   background-color: var(--link);
-  color: var(--petrol);
+  color: var(--background);
   padding: 7px 9px 7px 9px;
   border-radius: 100%;
   display: none;
+  transition: all 0.3s ease;
 }
 
 #nav-btn {
@@ -108,6 +93,10 @@ a {
 .nav-button:hover {
   cursor: pointer;
   filter: brightness(1.15);
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -141,11 +130,12 @@ a {
   }
 
   .nav-list li {
-    color: var(--petrol);
+    color: var(--background);
     padding: 10px;
   }
+}
 
-  .nav-:hover a {
-    filter: brightness(1.25);
-  }
+.nav-scrolled {
+  background-color: var(--background);
+  border-bottom: 2px solid var(--link);
 }

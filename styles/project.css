@@ -6,8 +6,7 @@
 }
 
 body {
-  background-color: var(--petrol);
-  color: var(--arctic-white);
+  background-color: var(--background);
 }
 
 section {
@@ -16,23 +15,37 @@ section {
 }
 
 h1 {
-  margin-left: 40px;
+  margin-left: 30px;
   display: inline-block;
-  background: linear-gradient(90deg, var(--orange) 30%, var(--yellow) 70%);
+  background: var(--title-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
 }
 
-i {
+.left-arrow {
   display: inline-block;
-  padding: 4px 13px 4px 13px;
-  background: var(--orange);
+  padding: 18px;
+  background-color: var(--link);
   border-radius: 100%;
-  font-size: 1.6rem;
-  color: var(--petrol);
-  transition: all 0.3s ease;
+  position: relative;
+  top: 5px;
+}
+
+.left-arrow i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--background);
+}
+
+.left-arrow:hover {
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
 }
 
 body section div {

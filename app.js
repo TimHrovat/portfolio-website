@@ -1,9 +1,9 @@
 window.addEventListener("scroll", (event) => {
   let nav = document.getElementById("nav");
   if (window.scrollY >= 200) {
-    nav.style.backgroundColor = "RGBA(0,0,0,0.3)";
+    nav.classList.add("nav-scrolled");
   } else {
-    nav.style.backgroundColor = null;
+    nav.classList.remove("nav-scrolled");
   }
 });
 
@@ -24,6 +24,39 @@ let showMenu = () => {
     burger.style.padding = "7px 10px 7px 10px";
   }
   menuIsShown = !menuIsShown;
+};
+
+function toggleTheme() {
+  let icon = document.getElementById("theme-btn-icon");
+
+  if (icon.classList.contains("fa-moon")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+    setTheme("theme-dark");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+    setTheme("theme-light");
+  }
+}
+
+let setTheme = (themeName) => {
+  localStorage.setItem("theme", themeName);
+  document.documentElement.className = themeName;
+};
+
+let getCurrentTheme = () => {
+  let icon = document.getElementById("theme-btn-icon");
+
+  if (localStorage.getItem("theme") === "theme-light") {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+    setTheme("theme-light");
+  } else {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+    setTheme("theme-dark");
+  }
 };
 
 function waitForMS(ms) {
@@ -54,9 +87,13 @@ async function write(
 }
 
 async function typewriter() {
-  await write("Hey, I'm", "hey", 130, "underscore1", 0);
-  await write("Tim Hrovat", "name", 130, "underscore2", 5000);
+  if (document.getElementById("name")) {
+    await write("Hey, I'm", "hey", 130, "underscore1", 0);
+    await write("Tim Hrovat", "name", 130, "underscore2", 5000);
+  }
   return;
 }
 
 typewriter();
+
+window.onload = getCurrentTheme;

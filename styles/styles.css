@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.theme-light {
+  --text: #3a3a3a;
+  --background: rgb(230, 230, 230);
+  --title-gradient: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  --project-card-bg: #4b6cb7;
+  --project-card-text: rgb(230, 230, 230);
+  --link: #4b6cb7;
+}
+
+.theme-dark {
+  --text: rgb(203, 203, 203);
+  --background: #000815;
+  --title-gradient: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  --project-card-bg: #4ca7dc;
+  --project-card-text: #181818;
+  --link: #4ca7dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  padding-bottom: 100px;
+}
+
 .center {
   position: absolute;
   left: 50%;
@@ -15,7 +50,7 @@
 .center h1 {
   font-size: 3.5rem;
   margin-top: 10px;
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  background: var(--title-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -27,14 +62,13 @@
 }
 
 .page {
-  /* min-height: 100vh; */
   padding: 100px 15% 0 15%;
   max-width: 1500px;
 }
 
 .page h2 {
   display: inline-block;
-  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  background: var(--title-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -81,7 +115,7 @@
 
 .project {
   width: 100%;
-  background-color: var(--accent);
+  background-color: var(--project-card-bg);
   padding-top: 25px;
   padding-bottom: 25px;
   border-radius: 20px;
@@ -96,6 +130,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: var(--project-card-text);
 }
 
 .project i {
@@ -104,10 +139,14 @@
   transform: translateY(-50%);
   right: 30px;
   font-size: 1.3rem;
+  color: var(--project-card-text);
 }
 
 .project:hover {
-  filter: brightness(1.25);
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
 }
 
 @media screen and (max-width: 850px) {
@@ -123,7 +162,7 @@
   }
 
   .page {
-    padding: 100px 10% 100px 10%;
+    padding: 50px 10% 50px 10%;
   }
   .two-column img {
     margin: auto;
@@ -164,7 +203,6 @@
 }
 
 .down-arrow {
-  /* background: radial-gradient(var(--orange) 20%, var(--yellow)); */
   background-color: var(--link);
   display: block;
   position: absolute;
@@ -182,7 +220,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: var(--petrol);
+  color: var(--background);
 }
 
 .down-arrow:hover {
@@ -190,4 +228,32 @@
   outline-color: var(--link);
   outline-offset: 3px;
   outline-width: 2px;
+  filter: brightness(1.25);
+}
+
+.theme-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: var(--link);
+  padding: 18px;
+  border: none;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.theme-btn i {
+  color: var(--background);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+
+.theme-btn:hover {
+  outline-style: solid;
+  outline-color: var(--link);
+  outline-offset: 3px;
+  outline-width: 2px;
+  filter: brightness(1.25);
+  cursor: pointer;
 }
