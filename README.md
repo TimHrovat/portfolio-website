@@ -1,3 +1,3 @@
-# portfolio-website
+# Project Description
 
-The website is accessible at: timhrovat.com
+This simple portfolio website is accessible at: www.timhrovat.com
