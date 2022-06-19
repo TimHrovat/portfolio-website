@@ -82,7 +82,6 @@ a {
   color: var(--background);
   padding: 7px 9px 7px 9px;
   border-radius: 100%;
-  -webkit-border-radius: 100%;
   display: none;
   transition: all 0.3s ease;
 }
